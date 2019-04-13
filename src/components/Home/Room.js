@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { setRem, setLetterSpacing } from "../../utils";
+import { setRem, setLetterSpacing, setColors } from "../../utils";
 import { SmallBtn } from "../Globals/Buttons";
+import PropTypes from "prop-types";
+
 const Room = ({ className, room }) => {
-  const { img, title, info } = room;
-  console.log(room);
+  const { img = "", title = "", info = "" } = room;
 
   return (
     <article className={className}>
@@ -21,8 +22,8 @@ const Room = ({ className, room }) => {
 };
 
 export default styled(Room)`
+  background: ${setColors.mainWhite};
   margin: ${setRem(32)} 0;
-  padding: ${setRem(16)};
   .img-container {
     img {
       width: 100%;
@@ -30,12 +31,23 @@ export default styled(Room)`
     }
   }
   .room-info {
+    padding: 0 ${setRem()} ${setRem()} ${setRem()};
     h4 {
       text-transform: capitalize;
       margin: ${setRem(17)} 0;
+      ${setLetterSpacing()};
     }
     p {
-      ${setLetterSpacing()};
+      ${setLetterSpacing(2)};
     }
   }
 `;
+
+Room.propTypes = {
+  room: PropTypes.shape({
+    img: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    info: PropTypes.string.isRequired
+    // price: PropTypes.number.isRequired
+  })
+};

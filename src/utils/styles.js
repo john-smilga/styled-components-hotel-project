@@ -1,4 +1,5 @@
 import { css } from "styled-components";
+
 export const setColors = {
   primaryColor: "#af9a7d",
   mainWhite: "#fff",
@@ -47,6 +48,7 @@ export const setTransition = ({
 };
 
 const sizes = {
+  large: 1200,
   desktop: 992,
   tablet: 768,
   phone: 576
@@ -62,5 +64,3 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
 
   return acc;
 }, {});
-
-console.log(media.desktop);

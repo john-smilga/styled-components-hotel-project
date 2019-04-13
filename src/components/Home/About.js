@@ -54,8 +54,10 @@ const AboutCenter = styled.div`
   }
   width: 90vw;
   margin: 0 auto;
+  ${media.desktop`
+  width:100vw;
+  display: grid;
   max-width: 1170px;
-  ${media.desktop`display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
     .about-img {
