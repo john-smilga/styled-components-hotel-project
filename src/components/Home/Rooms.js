@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { setColors, media, setRem } from "../../utils";
+import { setColor, media, setRem } from "../../utils";
 import Section from "../Globals/Section";
 import Title from "../Globals/Title";
 import rooms from "./rooms-data";
@@ -11,7 +11,7 @@ export default class Rooms extends Component {
   };
   render() {
     return (
-      <Section color={setColors.lightGrey}>
+      <Section color={setColor.lightGrey}>
         <Title title="our rooms" center />
         <RoomsCenter>
           {this.state.rooms.map(room => {

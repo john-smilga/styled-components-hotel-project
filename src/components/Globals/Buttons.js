@@ -1,27 +1,27 @@
 import styled from "styled-components";
 import {
-  setColors,
+  setColor,
   setRem,
   setBorder,
   setLetterSpacing,
   setTransition,
-  setFonts
+  setFont
 } from "../../utils";
 export const PrimaryBtn = styled.button`
   display: inline-block;
-  background: ${setColors.primaryColor};
-  color: ${setColors.mainWhite};
+  background: ${setColor.primaryColor};
+  color: ${setColor.mainWhite};
   text-transform: capitalize;
   font-size: ${setRem(18)};
-  ${setFonts.main};
+  ${setFont.main};
   padding: ${setRem(17)} ${setRem(36)};
-  ${setBorder({ color: setColors.primaryColor })};
+  ${setBorder({ color: setColor.primaryColor })};
   ${setLetterSpacing(3)};
   cursor: pointer;
   ${setTransition()};
   &:hover {
     background: transparent;
-    color: ${setColors.primaryColor};
+    color: ${setColor.primaryColor};
   }
   ${props =>
     `margin: ${props.t || 0} ${props.r || 0} ${props.b || 0} ${props.l || 0}`};

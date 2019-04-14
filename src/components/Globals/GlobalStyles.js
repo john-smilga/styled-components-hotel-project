@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { setColors, setFonts } from "../../utils";
+import { setColor, setFont } from "../../utils";
 const Globals = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 /* :root{
@@ -13,11 +13,11 @@ const Globals = createGlobalStyle`
 body{
  font-size:100%;
  color:#222;
-  color: ${setColors.mainBlack}; 
+  color: ${setColor.mainBlack}; 
   background:#fff;
-  background: ${setColors.mainwhite};
+  background: ${setColor.mainwhite};
   font-family: 'Lato', sans-serif;
-  font-family:${setFonts.main};
+  font-family:${setFont.main};
  }
 h1 { font-size: 3em; line-height: 1.2; margin-bottom: 0.5em; }
 h2 { font-size: 2em; margin-bottom: 0.75em; }

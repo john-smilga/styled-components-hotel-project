@@ -4,7 +4,7 @@ import styled from "styled-components";
 import {
   setRem,
   setBorder,
-  setColors,
+  setColor,
   setLetterSpacing,
   media
 } from "../../utils";
@@ -44,7 +44,7 @@ const AboutCenter = styled.div`
     img {
       width: 100%;
       display: block;
-      ${setBorder({ width: setRem(6), color: setColors.primaryColor })}
+      ${setBorder({ width: setRem(6), color: setColor.primaryColor })}
     }
   }
   .about-info {

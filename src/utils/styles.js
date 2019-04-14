@@ -1,13 +1,13 @@
 import { css } from "styled-components";
 
-export const setColors = {
+export const setColor = {
   primaryColor: "#af9a7d",
   mainWhite: "#fff",
   mainBlack: "#222",
   mainGrey: "#ececec",
   lightGrey: "#f7f7f7"
 };
-export const setFonts = {
+export const setFont = {
   main: "  font-family: 'Lato', sans-serif;",
   slanted: ""
 };
@@ -64,3 +64,9 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
 
   return acc;
 }, {});
+
+export const setShadow = {
+  light: "box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75)",
+  dark: "box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75)",
+  darkest: "box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75)"
+};

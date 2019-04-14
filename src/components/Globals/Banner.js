@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css, keyframes } from "styled-components";
 
-import { setColors, setRem, setLetterSpacing, setBorder } from "../../utils";
+import { setColor, setRem, setLetterSpacing, setBorder } from "../../utils";
 
 const fadeIn = (start, point, end) => {
   const animation = keyframes`
@@ -43,13 +43,13 @@ const BannerWrapper = styled(Banner)`
   padding: ${setRem(60)} ${setRem(32)};
   ${setLetterSpacing()};
   position: relative;
-  color: ${setColors.mainWhite};
+  color: ${setColor.mainWhite};
   h1 {
     text-transform: capitalize;
     font-size: ${setRem(48)};
-    color: ${setColors.primaryColor};
+    color: ${setColor.primaryColor};
     span {
-      color: ${setColors.mainWhite};
+      color: ${setColor.mainWhite};
     }
   }
   p {
@@ -59,7 +59,7 @@ const BannerWrapper = styled(Banner)`
 
   @media (min-width: 768px) {
     width: 70vw;
-    ${setBorder({ width: "6px", color: setColors.primaryColor })}
+    ${setBorder({ width: "6px", color: setColor.primaryColor })}
     p {
       width: 75%;
     }
